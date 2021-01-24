@@ -1,0 +1,75 @@
+{
+  "name": "2_faces_net-panel",
+  "version": "1.0.0",
+  "description": "Control panel for 2_FACES_NET project",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "vue-cli-service serve --open"
+  },
+  "author": {
+    "name": "RedHitMark",
+    "email": "russodivito.marco@gmail.com",
+    "url": "https://redhitmark.github.io"
+  },
+  "contributors": [
+    {
+      "name": "Francesco Mercaldo",
+      "email": "francesco.mercaldo@unimol.it",
+      "url": "http://docenti.unimol.it/index.php?u=f.mercaldo"
+    },
+    {
+      "name": "Rosangela Casolare",
+      "email": "rosangela.casolare@unimol.it"
+    }
+  ],
+  "license": "GPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RedHitMark/2_FACES_NET-panel.git"
+  },
+  "bugs": "https://github.com/RedHitMark/2_FACES_NET-panel/issues",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.8.2",
+    "mdbvue": "^6.7.2",
+    "vue": "^2.6.12",
+    "vue-bulma-accordion": "^0.5.2",
+    "vue-codemirror": "^4.0.6",
+    "vue-json-tree-view": "^2.1.6",
+    "vue-multiselect": "^2.1.6",
+    "vue-router": "^3.3.4",
+    "vue-search-select": "^2.9.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.10",
+    "@vue/cli-plugin-eslint": "~4.5.10",
+    "@vue/cli-service": "~4.5.10",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.17.0",
+    "eslint-plugin-vue": "^7.4.1",
+    "vue-cli-plugin-mdb": "~2.1.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
