@@ -33,8 +33,12 @@
               </mdb-col>
 
               <mdb-col>
+                <input type="text" v-model="target.arg">
+              </mdb-col>
+
+              <mdb-col>
                 <mdb-btn color="unique-color-dark" class="btn unique-color-dark text-white ripple-parent"
-                         v-on:click="send(target.device, target.payload_id)">
+                         v-on:click="send(target.device, target.payload_id, target.arg)">
                   Send malware <i class="fas fa-user-secret"></i>
                 </mdb-btn>
               </mdb-col>
@@ -111,18 +115,13 @@ export default {
         this.refreshRate -= this.refreshRate === 1000 ? 0 : 1000;
         this.targets = newTargets;
       }
-
-      /*setTimeout(() => {
-          this.getDevices()
-      }, this.refreshRate)*/
-
     },
     async getPayloads() {
       const response = await PayloadsService.fetchPayloads();
       this.payloads = response.data;
     },
-    async send(device, payload_id) {
-      DevicesService.activate(device, payload_id)
+    async send(device, payload_id, arg) {
+      DevicesService.activate(device, payload_id, arg)
           .then((response) => {
             this.showAlert = true;
             this.alertColor = "success";

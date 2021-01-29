@@ -4,10 +4,11 @@ export default {
     fetchDevices () {
         return Api().get('devices')
     },
-    activate (device, payload_id) {
+    activate (device, payload_id, arg) {
         let data = {
             payload_id: payload_id,
-            device: device
+            device: device,
+            payload_args: arg
         };
         return Api().post('devices', data)
     }
