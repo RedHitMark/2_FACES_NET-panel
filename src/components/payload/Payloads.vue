@@ -18,7 +18,7 @@
     <section v-else>
       <mdb-row class="justify-content-center">
         <mdb-col sm="12" md="6" lg="6" class="justify-content-center align-items-center">
-          <router-link tag="button" class="btn unique-color-dark text-white ripple-parent" to="/payloads/new/">Create
+          <router-link tag="button" class="btn dark-button text-white ripple-parent" to="/payloads/new/">Create
             new
           </router-link>
         </mdb-col>
@@ -35,14 +35,14 @@
               <mdb-card-text>{{ payload.description }}</mdb-card-text>
 
               <mdb-row class="justify-content-center align-items-center">
-                <router-link tag="button" class="btn unique-color-dark text-white ripple-parent"
+                <router-link tag="button" class="btn dark-button text-white ripple-parent"
                              :to="'/payloads/details/' + payload._id">Show detail
                 </router-link>
               </mdb-row>
               <mdb-row class="justify-content-around align-items-around">
-                <router-link tag="button" class="btn rey-lighten-5 text-unique-color-dark ripple-parent"
+                <router-link tag="button" class="btn dark-button rey-lighten-5 text-unique-color-dark ripple-parent"
                              :to="'/payloads/edit/' + payload._id"><i class="fas fa-edit"></i></router-link>
-                <mdb-btn color="grey-lighten-5" class="btn grey-lighten-5 text-unique-color-dark ripple-parent"
+                <mdb-btn color="grey-lighten-5" class="btn dark-button grey-lighten-5 text-unique-color-dark ripple-parent"
                          v-on:click="deletePayload(payload._id)"><i class="fas fa-trash-alt"></i></mdb-btn>
               </mdb-row>
             </mdb-card-body>

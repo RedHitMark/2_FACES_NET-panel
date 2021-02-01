@@ -8,6 +8,7 @@ import PayloadDetails from "@/components/payload/PayloadDetails";
 import NewPayload from "@/components/payload/NewPayload";
 import EditPayload from "@/components/payload/EditPayload";
 import Attacks from "@/components/attack/Attacks";
+import Botnet from "@/components/Botnet";
 
 Vue.use(Router);
 
@@ -33,6 +34,11 @@ export default new Router({
             path: '/devices',
             name: 'devices',
             component: Devices
+        },
+        {
+            path: '/botnet',
+            name: 'botnet',
+            component: Botnet
         },
         {
             path: '/payloads',

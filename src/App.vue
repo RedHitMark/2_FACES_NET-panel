@@ -26,9 +26,9 @@ export default {
 
 /** Default font **/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-body, input, select, textarea {
+html, body, input, select, textarea {
   font-family: "Roboto Light", "Segoe UI", Arial, Helvetica, sans-serif;
-  color: #555555;
+  color: #ffffff !important;
   font-size: calc(15px + 0.35vw) !important;
   line-height: calc(15px + 1.05vw) !important;
   -webkit-font-smoothing: antialiased;
@@ -36,17 +36,19 @@ body, input, select, textarea {
 }
 a {
   text-decoration: none;
-  color: #111111;
+  color: #fff;
 }
 
 /** **/
 body, html {
   margin: 0;
   height: 100%;
+  background: #121212;
 }
 #wrapper {
   min-height: 80vh;
   width: 100%;
+  background: #303030;
 }
 .vue-codemirror .CodeMirror {
   height: auto;
@@ -55,5 +57,23 @@ body, html {
 .container {
   width: 75em !important;
   max-width: 100% !important;
+}
+
+
+/** Dark Cards **/
+.card {
+  background: #424242 !important;
+}
+.card .card-title {
+  color: #fff !important;
+}
+.card .card-text {
+  color: #fff !important;
+}
+
+
+/** **/
+.dark-button {
+  background-color: #bb86fc !important;
 }
 </style>

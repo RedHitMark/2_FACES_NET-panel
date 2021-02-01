@@ -1,11 +1,11 @@
 <template>
-  <mdb-footer color="unique-color-dark" class="page-footer font-small mt-0 pt-0" id="footer">
-    <mdb-container class="py-3 text-center text-md-left">
+  <mdb-footer class="page-footer font-small mt-0 pt-0" id="footer">
+    <mdb-container class="footer-main py-3 text-center text-md-left">
       <mdb-row class="mt-3">
         <mdb-col md="12" lg="3" xl="3" class="mb-4">
-          <h6 class="h6-responsive color-white text-uppercase font-weight-bold"><strong>2Faces malware</strong></h6>
+          <h6 class="h6-responsive color-white text-uppercase font-weight-bold"><strong>2_FACES_NET</strong></h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px"/>
-          <p>This is a university thesis about a new model of Android malware based on reflection, dynamic compiling and
+          <p>This is a university project about a new model of DDoS with a botnet of Android devices infected by an Android malware based on reflection, dynamic compiling and
             dynamic loading in order to execute malicious code not in the device at compile-time</p>
         </mdb-col>
 
@@ -22,9 +22,9 @@
         <mdb-col md="3" lg="3" xl="3" class="mb-4">
           <h6 class="text-uppercase font-weight-bold"><strong>Useful links</strong></h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px"/>
-          <p><a href="https://github.com/RedHitMark/2faces-backend">GitHub Backend Repository</a></p>
-          <p><a href="https://github.com/RedHitMark/2faces-panel">GitHun Panel Repository</a></p>
-          <p><a href="https://github.com/RedHitMark/2faces-android">GitHub Android Repository</a></p>
+          <p><a href="https://github.com/RedHitMark/2_FACES_NET-backend">GitHub Backend Repository</a></p>
+          <p><a href="https://github.com/RedHitMark/2_FACES_NET-panel">GitHub Panel Repository</a></p>
+          <p><a href="https://github.com/RedHitMark/2_FACES_NET-android">GitHub Android Repository</a></p>
         </mdb-col>
 
         <mdb-col md="6" lg="3" xl="3" class="mb-4">
@@ -86,7 +86,17 @@ export default {
 </script>
 
 <style scoped>
+#footer {
+  margin-top: 0 !important;
+  background: #212121 !important;
+}
 h6 {
   color: white;
+}
+.footer-main {
+  background: #212121 !important;
+}
+.footer-copyright {
+  background: #000 !important;
 }
 </style>

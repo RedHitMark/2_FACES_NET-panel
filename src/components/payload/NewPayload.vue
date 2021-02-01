@@ -71,10 +71,10 @@
 
       <mdb-row>
         <mdb-col class="justify-content-center end-buttons">
-          <input class="btn unique-color-dark text-white ripple-parent" type="submit" value="Update payload">
+          <input class="btn dark-button text-white ripple-parent" type="submit" value="Update payload">
         </mdb-col>
         <mdb-col class="justify-content-center end-buttons">
-          <router-link tag="button" class="btn unique-color-dark text-white ripple-parent" to="/payloads">Go back
+          <router-link tag="button" class="btn dark-button text-white ripple-parent" to="/payloads">Go back
           </router-link>
         </mdb-col>
       </mdb-row>

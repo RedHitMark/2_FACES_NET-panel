@@ -8,6 +8,7 @@
       <mdb-col md="6" class="mb-5" v-for="(target, index) in targets" v-bind:key="index">
         <mdb-card>
           <mdb-card-body>
+            <img v-bind:src="target.device.deviceImage" v-bind:alt="target.device.model">
             <mdb-card-title><strong>{{ target.device.model }}</strong></mdb-card-title>
 
             <mdb-card-text>API: {{ target.device.api }}</mdb-card-text>
@@ -33,7 +34,7 @@
               </mdb-col>
 
               <mdb-col>
-                <input type="text" v-model="target.arg">
+                <input class="text-black" type="text" v-model="target.arg">
               </mdb-col>
 
               <mdb-col>
@@ -166,5 +167,9 @@ export default {
 
 .green-icon {
   color: green
+}
+
+.text-black{
+  color: black !important;
 }
 </style>

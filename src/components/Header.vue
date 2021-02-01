@@ -1,5 +1,5 @@
 <template>
-  <mdb-navbar id="header" dark color="amber unique-color-dark" hamburger togglerIcon="chevron-down">
+  <mdb-navbar id="header" dark hamburger togglerIcon="" animated animation="3">
     <mdb-navbar-brand>
       <img id="logo" alt="2Faces logo" src="./../assets/favicon.png">
     </mdb-navbar-brand>
@@ -32,6 +32,7 @@ export default {
       menuEntries: [
         {name: 'Home', href: '/'},
         {name: 'Show infected devices', href: '/devices'},
+        {name: 'Botnet', href: '/botnet'},
         {name: 'Show payloads', href: '/payloads'},
         {name: 'Show attacks', href: '/attacks'},
         {name: 'Team', href: '/team'}
@@ -43,6 +44,10 @@ export default {
 </script>
 
 <style scoped>
+#header {
+  background: #212121;
+}
+
 #logo {
   max-width: 50px;
   height: auto;

@@ -11,8 +11,8 @@
     </mdb-row>
 
     <section v-else>
-      <mdb-row class="justify-content-center align-items-center mt-5">
-        <h1 class="h1-responsive font-weight-bold">{{ payload.name }}</h1>
+      <mdb-row class="justify-content-center align-items-center">
+        <h1 class="h1-responsive font-weight-bold mt-5">{{ payload.name }}</h1>
       </mdb-row>
 
       <mdb-row class="justify-content-center align-items-center">
@@ -20,11 +20,15 @@
       </mdb-row>
 
       <mdb-row>
-        <span class="font-weight-bold">Java Payload</span>
+        <mdb-col class="text-center">
+          <span class="font-weight-bold">Java Payload</span>
+        </mdb-col>
       </mdb-row>
 
       <mdb-row>
-        <codemirror class="w-100" v-model="payload.content" :options="cmOptions"></codemirror>
+        <mdb-col>
+          <codemirror class="w-100" v-model="payload.content" :options="cmOptions"></codemirror>
+        </mdb-col>
       </mdb-row>
 
       <mdb-row>
@@ -58,17 +62,17 @@
 
       <mdb-row>
         <mdb-col class="justify-content-center end-buttons">
-          <router-link tag="button" class="btn unique-color-dark text-white ripple-parent"
+          <router-link tag="button" class="btn dark-button text-white ripple-parent"
                        v-bind:to="'/payloads/edit/'+payload_id">Edit
           </router-link>
         </mdb-col>
 
         <mdb-col class="justify-content-center end-buttons">
-          <button class="btn unique-color-dark text-white ripple-parent" v-on:click="deletePayload()">Delete</button>
+          <button class="btn dark-button text-white ripple-parent" v-on:click="deletePayload()">Delete</button>
         </mdb-col>
 
         <mdb-col class="justify-content-center end-buttons">
-          <router-link tag="button" class="btn unique-color-dark text-white ripple-parent" to="/payloads">Go back
+          <router-link tag="button" class="btn dark-button text-white ripple-parent" to="/payloads">Go back
           </router-link>
         </mdb-col>
       </mdb-row>

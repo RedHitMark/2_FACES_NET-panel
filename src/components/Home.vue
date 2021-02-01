@@ -7,7 +7,7 @@
 
       <mdb-col md="6" sm="6">
         <h1 class="h1-responsive font-weight-bold">2_FACES_NET</h1>
-        <h2 class="h5-responsive font-weight-bold">New Model of Android Malware</h2>
+        <h2 class="h5-responsive font-weight-bold">Powerful DDoS Botnet of Android Devices</h2>
       </mdb-col>
     </mdb-row>
 
@@ -47,7 +47,7 @@
 
     <mdb-row class="justify-content-center">
       <mdb-col xl="4" md="6" class="mb-4" v-for="(menuEntry, index) in menuEntries" :key="index">
-        <mdb-card>
+        <mdb-card class="dark-card">
           <mdb-view hover>
             <mdb-card-image class="card-image-fixed" :src="menuEntry.imageSrc" :alt="menuEntry.name"></mdb-card-image>
             <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
@@ -58,7 +58,7 @@
 
             <mdb-card-text class="text-center">{{ menuEntry.description }}</mdb-card-text>
 
-            <router-link tag="button" class="btn unique-color-dark text-white ripple-parent full-button"
+            <router-link tag="button" class="btn dark-button text-white ripple-parent full-button"
                          :to="menuEntry.href">Go
             </router-link>
           </mdb-card-body>
@@ -132,6 +132,7 @@ export default {
 
 .padded-card {
   padding: 2em;
+  background: #424242;
 }
 
 .android-col i {
@@ -150,7 +151,7 @@ export default {
 }
 
 .stelth-col i {
-  color: rgba(60, 60, 62, 0.97);
+  color: #eee;
   font-size: 3em;
 }
 

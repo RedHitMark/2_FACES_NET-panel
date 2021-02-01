@@ -49,10 +49,10 @@
               </div>
 
               <mdb-row class="justify-content-around align-items-around">
-                <router-link tag="button" class="btn unique-color-dark text-white ripple-parent"
+                <router-link tag="button" class="btn dark-button text-white ripple-parent"
                              :to="'/payloads/details/' + attack.payload_id">Show payload sent
                 </router-link>
-                <mdb-btn color="grey-lighten-5" class="btn unique-color-darktext-white ripple-parent"
+                <mdb-btn color="grey-lighten-5" class="btn dark-button text-white ripple-parent"
                          v-on:click="deleteAttack(attack._id)"><i class="fas fa-trash-alt"></i></mdb-btn>
               </mdb-row>
             </mdb-collapse>
