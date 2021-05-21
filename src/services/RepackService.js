@@ -16,5 +16,8 @@ export default {
             description: description,
             sha1: sha1
         })
+    },
+    generatePezzotto(entry_id) {
+        return Api.repack().get('hack?entry_id=' + entry_id);
     }
 }
