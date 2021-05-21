@@ -7,7 +7,7 @@
     <mdb-row class="justify-content-center">
       <mdb-col md="6" class="mb-5" v-for="(target, index) in targets" v-bind:key="index">
         <mdb-card>
-          <mdb-card-body>
+          <mdb-card-body class="text-center">
             <img v-bind:src="target.device.deviceImage" v-bind:alt="target.device.model">
             <mdb-card-title><strong>{{ target.device.model }}</strong></mdb-card-title>
 
@@ -15,7 +15,7 @@
 
             <mdb-card-text>{{ target.device.ip }} - {{ target.device.port }}</mdb-card-text>
 
-            <ul>
+            <ul class="text-left">
               <li v-for="permission in target.device.permissions" v-bind:key="permission">{{ permission }}
                 <i v-if="isInArray(permission, target.device.permissionsGranted)"
                    class="fas fa-check-circle green-icon"></i>
@@ -24,7 +24,8 @@
             </ul>
 
             <mdb-row class="justify-content-center align-items-center">
-              <mdb-col>
+              <mdb-col  md="6" class="mb-1">
+                <label>Payload:</label>
                 <model-list-select :list="filterPayload(payloads, target.device.permissionsGranted)"
                                    v-model="target.payload_id"
                                    option-value="_id"
@@ -33,11 +34,16 @@
                 </model-list-select>
               </mdb-col>
 
-              <mdb-col>
-                <input class="text-black" type="text" v-model="target.arg">
+              <mdb-col md="6" class="mb-1 full-input">
+                <label for="arg">Arg:</label>
+                <input class="text-black" id="arg" type="text" v-model="target.arg">
               </mdb-col>
 
-              <mdb-col>
+              <mdb-col md="12" class="mb-1 text-left" v-if="target.payload_id">
+                <codemirror class="w-100" v-model="payloads.find(value => value._id===target.payload_id).content" :options="cmOptions"></codemirror>
+              </mdb-col>
+
+              <mdb-col md="12" class="mb-1">
                 <mdb-btn color="unique-color-dark" class="btn unique-color-dark text-white ripple-parent"
                          v-on:click="send(target.device, target.payload_id, target.arg)">
                   Send malware <i class="fas fa-user-secret"></i>
@@ -69,7 +75,11 @@ import DevicesService from "@/services/DevicesService";
 import {ModelListSelect} from 'vue-search-select'
 import PayloadsService from "@/services/PayloadsService";
 
-import {mdbContainer, mdbRow, mdbCol, mdbCard, mdbCardTitle, mdbCardBody, mdbCardText, mdbBtn, mdbAlert} from 'mdbvue';
+import {mdbAlert, mdbBtn, mdbCard, mdbCardBody, mdbCardText, mdbCardTitle, mdbCol, mdbContainer, mdbRow} from 'mdbvue';
+
+// import codemirror
+import 'codemirror/theme/darcula.css'
+import 'codemirror/lib/codemirror';
 
 export default {
   name: "Devices",
@@ -89,6 +99,14 @@ export default {
     return {
       targets: [],
       payloads: [],
+      cmOptions: {
+        tabSize: 4,
+        mode: 'text/x-java',
+        theme: 'darcula',
+        lineNumbers: false,
+        line: true,
+        readOnly: true
+      },
       refreshRate: 3000,
       showAlert: false,
       alertColor: "success",
@@ -171,5 +189,22 @@ export default {
 
 .text-black{
   color: black !important;
+}
+
+.full-input input{
+  color:  black !important;
+  width: 100%;
+}
+.full-input label {
+  width: 100%;
+}
+
+.CodeMirror {
+  font-size: 0.8em;
+}
+
+.alert {
+  width: 80%;
+  word-break: break-all;
 }
 </style>

@@ -2,7 +2,7 @@ import Api from '@/services/Api'
 
 export default {
     fetchDevices () {
-        return Api().get('devices')
+        return Api.backend().get('devices')
     },
     activate (device, payload_id, arg) {
         let data = {
@@ -10,6 +10,6 @@ export default {
             device: device,
             payload_args: arg
         };
-        return Api().post('devices', data)
+        return Api.backend().post('devices', data)
     }
 }

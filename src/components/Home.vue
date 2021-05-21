@@ -146,7 +146,7 @@ export default {
 }
 
 .dynamic-loading-col i {
-  color: #222222;
+  color: #eee;
   font-size: 3em;
 }
 

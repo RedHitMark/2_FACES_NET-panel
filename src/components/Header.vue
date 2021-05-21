@@ -35,6 +35,7 @@ export default {
         {name: 'Botnet', href: '/botnet'},
         {name: 'Show payloads', href: '/payloads'},
         {name: 'Show attacks', href: '/attacks'},
+        {name: 'Build your malware', href: '/build'},
         {name: 'Team', href: '/team'}
       ],
     }

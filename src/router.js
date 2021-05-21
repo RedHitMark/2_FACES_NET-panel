@@ -9,6 +9,7 @@ import NewPayload from "@/components/payload/NewPayload";
 import EditPayload from "@/components/payload/EditPayload";
 import Attacks from "@/components/attack/Attacks";
 import Botnet from "@/components/Botnet";
+import Builder from "@/components/Builder";
 
 Vue.use(Router);
 
@@ -64,6 +65,11 @@ export default new Router({
             path: '/attacks',
             name: 'attacks',
             component: Attacks
+        },
+        {
+            path: '/build',
+            name: 'build',
+            component: Builder
         }
     ]
 })
