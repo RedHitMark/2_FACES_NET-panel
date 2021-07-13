@@ -54,14 +54,14 @@
               <mdb-col  sm="12" md="6" lg="6" class="justify-content-center">
                 <mdb-btn v-if="entry.hacked_file" color="grey-lighten-5"
                          class="btn dark-button grey-lighten-5 text-unique-color-dark ripple-parent"
-                         v-on:click="download(entry.hacked_file)"><i class="fas fa-download"></i> Pezzotto
+                         v-on:click="download(entry.hacked_file)"><i class="fas fa-download"></i> Hacked
                 </mdb-btn>
               </mdb-col>
             </mdb-row>
 
             <mdb-btn color="grey-lighten-5"
                      class="btn dark-button grey-lighten-5 text-unique-color-dark ripple-parent"
-                     v-on:click="generatePezzotto(entry.id)"><i class="fas fa-cogs"></i> Generate Pezzotto
+                     v-on:click="generatePezzotto(entry.id)"><i class="fas fa-cogs"></i> Generate Hacked APK
             </mdb-btn>
 
           </mdb-card-body>

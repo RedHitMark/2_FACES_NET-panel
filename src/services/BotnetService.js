@@ -9,6 +9,6 @@ export default {
             polling: polling,
             num: num
         };
-        return Api().post('botnet', data)
+        return Api.backend().post('botnet', data)
     }
 }
